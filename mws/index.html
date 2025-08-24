@@ -82,11 +82,10 @@
         const options = { passive: false };
         window.addEventListener("touchstart", touchStart, options);
 
-        return () => window.removeEventListener("touchstart", touchStart, options);
+        return true; /*() => window.removeEventListener("touchstart", touchStart, options);*/
         }
 
         preventBrowserHistorySwipeGestures();
-        alert(1);
     </script>
 </body>
 </html>
