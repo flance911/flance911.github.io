@@ -68,5 +68,25 @@
     </div>
     
     <script type="text/javascript" src="dist/main.js"></script>
+    <script>
+        function preventBrowserHistorySwipeGestures() {
+        function touchStart(ev) {
+            if (ev.touches.length === 1) {
+            const touch = ev.touches[0];
+            if (touch.clientX < window.innerWidth * 0.1 || touch.clientX > window.innerWidth * 0.9) {
+                ev.preventDefault();
+            }
+            }
+        }
+
+        const options = { passive: false };
+        window.addEventListener("touchstart", touchStart, options);
+
+        return () => window.removeEventListener("touchstart", touchStart, options);
+        }
+
+        preventBrowserHistorySwipeGestures();
+        alert(1);
+    </script>
 </body>
 </html>
