@@ -10,7 +10,7 @@
             padding: 0;
         }
         html {
-            height: auto;
+            width: auto;
             overflow: hidden;
         }
         body {
@@ -19,8 +19,8 @@
             background-color: rgb(235, 233, 239);
             overflow: hidden;
 
-            min-height: 100vh;
-            height: 100vh;
+            min-width: 100vw;
+            width: 100vw;
             overflow: hidden;
         }
         .root {
@@ -94,11 +94,11 @@
     <script type="text/javascript" src="dist/main.js"></script>
     <script>
         const overflow = 100
-        document.body.style.overflowY = 'hidden';
-        document.body.style.marginTop = `${overflow}px`
-        document.body.style.height = window.innerHeight + overflow + "px"
-        document.body.style.paddingBottom = `${overflow}px`
-        window.scrollTo(0, overflow)
+        document.body.style.overflowX = 'hidden';
+        document.body.style.marginLeft = `${overflow}px`
+        document.body.style.width = window.innerWidth + overflow + "px"
+        document.body.style.paddingRight = `${overflow}px`
+        window.scrollTo(overflow, 0)
 
         /*
         const onTouchStart = (e: TouchEvent) => {
@@ -117,7 +117,7 @@
         }
         document.documentElement.addEventListener('touchstart', onTouchStart, { passive: false })
         document.documentElement.addEventListener('touchmove', onTouchMove, { passive: false })*/
-        
+
         /*function preventBrowserHistorySwipeGestures() {
             function touchStart(ev) {
                 if (ev.touches.length === 1) {
