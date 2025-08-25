@@ -10,6 +10,7 @@
             padding: 0;
         }
         html {
+            scroll-behavior: auto !important;
             width: auto;
             overflow: hidden;
         }
@@ -97,23 +98,30 @@
         // alert(screenWidth);
         if (parseInt(screenWidth) < '451') {
             // alert(1);
+            // max precise!
+           
             const overflow = 100
             document.body.style.overflowX = 'hidden'
             document.body.style.marginLeft = `${overflow}px`
-            document.body.style.width = window.innerWidth + overflow + "px"
+            document.body.style.width = window.innerWidth + overflow + "px" //window.innerWidth
             document.body.style.paddingRight = `${overflow}px`
-            window.scrollTo(overflow, 0)
-
-
-            // document.getElementsByClassName('container')[0].style.marginLeft = '-200px'; !
-            // document.getElementsByClassName('container')[0].style.position = 'fixed';
-            // document.getElementsByClassName('container')[0].style.left = '0';
+            // window.scrollTo(overflow, 0)
+            window.scrollTo({
+                top: 0,
+                left: overflow,
+                behavior: 'instant'
+            });
 
             document.getElementsByClassName('inner')[0].style.touchAction = 'none';
             document.getElementsByClassName('inner')[0].style.position = 'fixed';
             document.getElementsByClassName('inner')[0].style.left = '0';
             document.getElementsByClassName('inner')[0].style.width = screenWidth+'px';
+            
+            // max precise!
 
+            // document.getElementsByClassName('container')[0].style.marginLeft = '-200px'; !
+            // document.getElementsByClassName('container')[0].style.position = 'fixed';
+            // document.getElementsByClassName('container')[0].style.left = '0';
 
             // alert(screenWidth);
             //document.getElementsByTagName('canvas')[0].style.position = 'absolute';
