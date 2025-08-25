@@ -29,6 +29,8 @@
             overflow: hidden;
             margin: 0;
             padding: 0;
+
+            margin-left: -100px;
         }
         .container {
             width: 100%;
@@ -96,7 +98,7 @@
     <script>
         const screenWidth = window.screen.width;
         // alert(screenWidth);
-        if (parseInt(screenWidth) < '451') {
+        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || window.TelegramWebviewProxyProto !== 'undefined')) {
             // alert(1);
             // max precise!
            
@@ -112,14 +114,19 @@
                 behavior: 'instant'
             });
 
+            // document.getElementsByClassName('container')[0].style.position = 'fixed';
+            // document.getElementsByClassName('container')[0].style.left = '0';
+
             document.getElementsByClassName('inner')[0].style.touchAction = 'none';
             document.getElementsByClassName('inner')[0].style.position = 'fixed';
             document.getElementsByClassName('inner')[0].style.left = '0';
             document.getElementsByClassName('inner')[0].style.width = '100vw'; //screenWidth+'px';
 
-            
+            /*
             document.getElementsByTagName('canvas')[0].style.position = 'absolute';
             document.getElementsByTagName('canvas')[0].style.left = '0';
+            document.getElementsByTagName('canvas')[0].style.width = '100vw';
+*/
             // document.getElementsByTagName('canvas')[0].style.width = screenWidth+'px';
             
             // max precise!
