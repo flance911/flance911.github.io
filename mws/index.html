@@ -104,12 +104,18 @@
             document.body.style.paddingRight = `${overflow}px`
             window.scrollTo(overflow, 0)
 
+
+            document.getElementsByClassName('container')[0].style.position = 'fixed';
+            document.getElementsByClassName('container')[0].style.left = '0';
+            
             document.getElementsByClassName('inner')[0].style.touchAction = 'none';
+            document.getElementsByClassName('inner')[0].style.position = 'absolute';
+            document.getElementsByClassName('inner')[0].style.left = '0';
             // alert(screenWidth);
             // document.getElementsByClassName('inner')[0].setAttribute("style","touch-action: none;");
-            document.getElementsByTagName('canvas')[0].style.position = 'absolute';
+            document.getElementsByTagName('canvas')[0].style.position = 'fixed';
             document.getElementsByTagName('canvas')[0].style.left = '0';
-           // document.getElementsByTagName('canvas')[0].style.width = screenWidth+'px';
+            document.getElementsByTagName('canvas')[0].style.width = screenWidth+'px';
 
             /*document.getElementsByClassName('inner')[0].style.touchAction = 'none';
             document.getElementsByClassName('inner')[0].style.position = 'absolute';
