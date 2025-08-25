@@ -29,8 +29,6 @@
             overflow: hidden;
             margin: 0;
             padding: 0;
-
-            margin-left: -100px;
         }
         .container {
             width: 100%;
@@ -98,7 +96,7 @@
     <script>
         const screenWidth = window.screen.width;
         // alert(screenWidth);
-        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || window.TelegramWebviewProxyProto !== 'undefined')) {
+        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')) {
             // alert(1);
             // max precise!
            
