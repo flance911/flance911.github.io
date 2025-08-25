@@ -97,7 +97,7 @@
         // alert(screenWidth);
         if (parseInt(screenWidth) < '451') {
             // alert(1);
-            const overflow = 100
+            const overflow = 200
             document.body.style.overflowX = 'hidden'
             document.body.style.marginLeft = `${overflow}px`
             document.body.style.width = window.innerWidth + overflow + "px"
@@ -107,7 +107,7 @@
 
             document.getElementsByClassName('container')[0].style.position = 'fixed';
             document.getElementsByClassName('container')[0].style.left = '0';
-            
+
             document.getElementsByClassName('inner')[0].style.touchAction = 'none';
             document.getElementsByClassName('inner')[0].style.position = 'absolute';
             document.getElementsByClassName('inner')[0].style.left = '0';
