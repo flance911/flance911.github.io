@@ -105,6 +105,8 @@
             window.scrollTo(overflow, 0)
 
             document.getElementsByClassName('inner')[0].style.touchAction = 'none';
+            document.getElementsByClassName('inner')[0].style.position = 'absolute';
+            document.getElementsByClassName('inner')[0].style.left = '0';
             // document.getElementsByClassName('inner')[0].setAttribute("style","touch-action: none;");
             document.getElementsByTagName('canvas')[0].style.position = 'absolute';
             document.getElementsByTagName('canvas')[0].style.left = '0';
