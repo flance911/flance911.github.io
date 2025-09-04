@@ -7,6 +7,18 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <title>В мире МТС Web Services</title>
     <style type="text/css">
+        @font-face {
+            font-family: 'MTSCompact';
+            src: url('fonts/MTSCompact-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'MTSCompact-Medium';
+            src: url('fonts/MTSCompact-Medium.ttf');
+        }
+        @font-face {
+            font-family: 'MTSCompact-Bold';
+            src: url('fonts/MTSCompact-Bold.ttf');
+        }
         body, html {
             margin: 0;
             padding: 0;
@@ -74,6 +86,16 @@
             height: 100%;
             background-image: linear-gradient(0.25turn, #6e4aff, #49A16C);
         }*/
+        #emailinput {
+            color: rgba(72, 73, 90, 1);
+            font-weight: bold;
+        }
+        #emailinput::placeholder {
+            color: rgba(182, 185, 196, 1);
+        }
+        #emailinput.error::placeholder {
+            color: rgba(246, 54, 60, 1);
+        }
     </style>
 </head>
 <body>
