@@ -5,6 +5,19 @@
     <meta name="description" content="Добро пожаловать в мир МТС Web Services. Здесь ты можешь собрать бизнес-приложение, проверить качество ответов нейросетей и поработать с данными. Заверши игру и участвуй в розыгрыше крутых призов.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){
+            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=103928590', 'ym');
+
+        ym(103928590, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/103928590" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
     <title>В мире МТС Web Services</title>
     <style type="text/css">
         @font-face {
@@ -26,6 +39,7 @@
         html {
             scroll-behavior: auto !important;
             width: auto;
+            height: auto; /** */
             overflow: hidden;
         }
         body {
@@ -37,6 +51,9 @@
             min-width: 100vw;
             width: 100vw;
             overflow: hidden;
+
+            min-height: 100vh; /** */
+            height: 100vh; /** */
         }
         .root {
             height: 100%;
@@ -90,6 +107,9 @@
             color: rgba(72, 73, 90, 1);
             font-weight: bold;
         }
+        #emailinput.error {
+            color: rgba(246, 54, 60, 1);
+        }
         #emailinput::placeholder {
             color: rgba(182, 185, 196, 1);
         }
@@ -123,15 +143,23 @@
         if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')) {
             // alert(1);
             // max precise!
-           
+        
             const overflow = 200
             document.body.style.overflowX = 'hidden'
             document.body.style.marginLeft = `${overflow}px`
             document.body.style.width = window.innerWidth + overflow + "px" //window.innerWidth
             document.body.style.paddingRight = `${overflow}px`
+
+            /** */
+            document.body.style.overflowY = 'hidden'
+            document.body.style.marginTop = `${overflow}px`
+            document.body.style.height = window.innerHeight + overflow + "px"
+            document.body.style.paddingBottom = `${overflow}px`
+            /** */
+
             // window.scrollTo(overflow, 0)
             window.scrollTo({
-                top: 0,
+                top: overflow, // 0 /** */
                 left: overflow,
                 behavior: 'instant'
             });
@@ -142,7 +170,9 @@
             document.getElementsByClassName('inner')[0].style.touchAction = 'none';
             document.getElementsByClassName('inner')[0].style.position = 'fixed';
             document.getElementsByClassName('inner')[0].style.left = '0';
+            document.getElementsByClassName('inner')[0].style.top = '0'; /** */
             document.getElementsByClassName('inner')[0].style.width = '100vw'; //screenWidth+'px';
+            document.getElementsByClassName('inner')[0].style.height = '100vh'; /** */
 
             /*
             document.getElementsByTagName('canvas')[0].style.position = 'absolute';
