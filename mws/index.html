@@ -80,25 +80,11 @@
         }
         #c {
             border: 1px solid gray;
-            background: rgba(232, 228, 228, 1); /*rgba(232, 228, 228, 1); */ /*white;*/
+            background: rgba(232, 228, 228, 1); 
             position: relative;
             border: none;
         }
-        /*.fs-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 300px;
-            overflow-x: scroll;
-            filter: opacity(0.5);
-            pointer-events: none;
-        }
-        .fs-inner {
-            width: 10000px;
-            height: 100%;
-            background-image: linear-gradient(0.25turn, #6e4aff, #49A16C);
-        }*/
+        /**/
         #emailinput {
             color: rgba(72, 73, 90, 1);
             font-weight: bold;
@@ -121,110 +107,41 @@
                 <canvas data-width="" data-height="90%" id="c" width="375" height="667"></canvas>
             </div>
         </div>
-        <!--<div class="fs-container">
-            <div class="fs-inner">
-
-            </div>
-        </div>-->
+        <!---->
     </div>
     <div id="resources" style="display: none;">
-        <!-- <img id="back" src="img/back.webp" width="576" height="1024" /> -->
+        <!-- -->
         <!-- -->
     </div>
     
     <script type="text/javascript" src="dist/main.js"></script>
     <script>
         const screenWidth = window.screen.width;
-        // alert(screenWidth);
+
         if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')) {
-            // alert(1);
-            // max precise!
-           
+
             const overflow = 200
             document.body.style.overflowX = 'hidden'
             document.body.style.marginLeft = `${overflow}px`
-            document.body.style.width = window.innerWidth + overflow + "px" //window.innerWidth
+            document.body.style.width = window.innerWidth + overflow + "px" //
             document.body.style.paddingRight = `${overflow}px`
-            // window.scrollTo(overflow, 0)
+            //
             window.scrollTo({
                 top: 0,
                 left: overflow,
                 behavior: 'instant'
             });
 
-            // document.getElementsByClassName('container')[0].style.position = 'fixed';
-            // document.getElementsByClassName('container')[0].style.left = '0';
 
             document.getElementsByClassName('inner')[0].style.touchAction = 'none';
             document.getElementsByClassName('inner')[0].style.position = 'fixed';
             document.getElementsByClassName('inner')[0].style.left = '0';
-            document.getElementsByClassName('inner')[0].style.width = '100vw'; //screenWidth+'px';
+            document.getElementsByClassName('inner')[0].style.width = '100vw'; 
 
-            /*
-            document.getElementsByTagName('canvas')[0].style.position = 'absolute';
-            document.getElementsByTagName('canvas')[0].style.left = '0';
-            document.getElementsByTagName('canvas')[0].style.width = '100vw';
-*/
-            // document.getElementsByTagName('canvas')[0].style.width = screenWidth+'px';
-            
-            // max precise!
-
-            // document.getElementsByClassName('container')[0].style.marginLeft = '-200px'; !
-            // document.getElementsByClassName('container')[0].style.position = 'fixed';
-            // document.getElementsByClassName('container')[0].style.left = '0';
-
-            // alert(screenWidth);
-            //document.getElementsByTagName('canvas')[0].style.position = 'absolute';
-            //document.getElementsByTagName('canvas')[0].style.left = '0';
-            // document.getElementsByTagName('canvas')[0].style.width = screenWidth+'px';
-
-            /*document.getElementsByClassName('inner')[0].style.touchAction = 'none';
-            document.getElementsByClassName('inner')[0].style.position = 'absolute';
-            document.getElementsByClassName('inner')[0].style.left = '0';
-            // alert(screenWidth);
-            // document.getElementsByClassName('inner')[0].setAttribute("style","touch-action: none;");
-            document.getElementsByTagName('canvas')[0].style.position = 'fixed';
-            document.getElementsByTagName('canvas')[0].style.left = '0';
-            document.getElementsByTagName('canvas')[0].style.width = screenWidth+'px';*/
+            /**/
         }
 
-        /*
-        const onTouchStart = (e: TouchEvent) => {
-        ts = e.touches[0].clientY
-        }
-        const onTouchMove = (e: TouchEvent) => {
-        if (scrollableEl) {
-            const scroll = scrollableEl.scrollTop
-            const te = e.changedTouches[0].clientY
-            if (scroll <= 0 && ts! < te) {
-            e.preventDefault()
-            }
-        } else {
-            e.preventDefault()
-        }
-        }
-        document.documentElement.addEventListener('touchstart', onTouchStart, { passive: false })
-        document.documentElement.addEventListener('touchmove', onTouchMove, { passive: false })*/
-
-        /*function preventBrowserHistorySwipeGestures() {
-            function touchStart(ev) {
-                if (ev.touches.length === 1) {
-                    const touch = ev.touches[0];
-                    if (touch.clientX < window.innerWidth * 0.1 || touch.clientX > window.innerWidth * 0.9) {
-                        //alert(1);
-                        ev.preventDefault();
-                        return;
-                    }
-                }
-            }
-
-            const options = { passive: false };
-            window.addEventListener("touchstart", touchStart, options);
-
-            return true; //() => window.removeEventListener("touchstart", touchStart, options);
-        }
-
-        preventBrowserHistorySwipeGestures();*/
+        /**/
     </script>
 </body>
 </html>
