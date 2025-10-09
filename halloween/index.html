@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Halloween description">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
+
+    <title>Halloween</title>
+    <style type="text/css">
+        /* @font-face {
+            font-family: 'MTSCompact';
+            src: url('fonts/MTSCompact-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'MTSCompact-Medium';
+            src: url('fonts/MTSCompact-Medium.ttf');
+        }
+        @font-face {
+            font-family: 'MTSCompact-Bold';
+            src: url('fonts/MTSCompact-Bold.ttf');
+        } */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: auto !important;
+            width: auto;
+            overflow: hidden;
+        }
+        body {
+            height: 100%;
+            -webkit-font-smoothing: antialiased;
+            background-color: rgb(235, 233, 239);
+            overflow: hidden;
+
+            min-width: 100vw;
+            width: 100vw;
+            overflow: hidden;
+        }
+        .root {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+        }
+        .inner {
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media(max-width: 450px) {
+            .inner {
+                align-items: flex-start;
+            }
+        }
+        #c, #cpk {
+            border: 1px solid gray;
+            background: rgba(232, 228, 228, 1); 
+            position: relative;
+            border: none;
+        }
+        /**/
+        /* #emailinput {
+            color: rgba(72, 73, 90, 1);
+            font-weight: bold;
+        }
+        #emailinput.error {
+            color: rgba(246, 54, 60, 1);
+        }
+        #emailinput::placeholder {
+            color: rgba(182, 185, 196, 1);
+        }
+        #emailinput.error::placeholder {
+            color: rgba(246, 54, 60, 1);
+        } */
+    </style>
+</head>
+<body>
+    <div class="root">
+        <div class="container">
+            <div class="inner">
+                <canvas data-width="" data-height="90%" id="c" width="375" height="667"></canvas>
+                <canvas data-width="" data-height="100%" id="cpk" width="1440" height="1024"></canvas>
+            </div>
+        </div>
+        <!---->
+    </div>
+    <div id="resources" style="display: none;">
+        <!-- -->
+        <!-- -->
+    </div>
+    
+    <script type="text/javascript" src="dist/main.js"></script>
+    <script>
+        const screenWidth = window.screen.width;
+
+        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')) {
+
+            const overflow = 200
+            document.body.style.overflowX = 'hidden'
+            document.body.style.marginLeft = `${overflow}px`
+            document.body.style.width = window.innerWidth + overflow + "px" //
+            document.body.style.paddingRight = `${overflow}px`
+            //
+            window.scrollTo({
+                top: 0,
+                left: overflow,
+                behavior: 'instant'
+            });
+
+
+            document.getElementsByClassName('inner')[0].style.touchAction = 'none';
+            document.getElementsByClassName('inner')[0].style.position = 'fixed';
+            document.getElementsByClassName('inner')[0].style.left = '0';
+            document.getElementsByClassName('inner')[0].style.width = '100vw'; 
+
+            /**/
+        }
+
+        /**/
+    </script>
+</body>
+</html>
