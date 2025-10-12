@@ -144,11 +144,12 @@
                 top: 50000, // 0, // top: overflow,
                 left: overflow,
                 behavior: 'instant'
-            });
+            }); 
 
 
             document.getElementsByClassName('inner')[0].style.touchAction = 'none';
             // document.getElementsByClassName('inner')[0].style.position = 'fixed';
+            document.getElementsByClassName('inner')[0].style.width = '100vw'; //
             document.getElementsByClassName('inner')[0].style.left = '0';
             document.getElementsByClassName('inner')[0].style.width = '100vw'; 
 
