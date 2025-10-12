@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="description" content="Halloween description">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <!-- <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
 
     <title>Halloween</title>
@@ -21,8 +22,10 @@
             src: url('fonts/MTSCompact-Bold.ttf');
         } */
         body, html {
+            height: 100%;
             margin: 0;
             padding: 0;
+            overflow: hidden; /* Запрещаем прокрутку всей страницы */
         }
         html {
             scroll-behavior: auto !important;
@@ -33,7 +36,6 @@
             height: 100%;
             -webkit-font-smoothing: antialiased;
             background-color: rgb(235, 233, 239);
-            overflow: hidden;
 
             min-width: 100vw;
             width: 100vw;
@@ -44,6 +46,8 @@
             overflow: hidden;
             margin: 0;
             padding: 0;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch; /* Для плавности на iOS */
         }
         .container {
             width: 100%;
