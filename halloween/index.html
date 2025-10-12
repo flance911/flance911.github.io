@@ -127,7 +127,7 @@
     <script>
         const screenWidth = window.screen.width;
 
-        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')) {
+        /*if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')) {
 
             const overflow = 200
             document.body.style.overflowX = 'hidden'
@@ -148,8 +148,8 @@
 
 
             document.getElementsByClassName('inner')[0].style.touchAction = 'none';
-            // document.getElementsByClassName('inner')[0].style.position = 'fixed';
-            document.getElementsByClassName('inner')[0].style.width = '100vw'; //
+            document.getElementsByClassName('inner')[0].style.position = 'fixed';
+            // document.getElementsByClassName('inner')[0].style.width = '100vw'; //
             document.getElementsByClassName('inner')[0].style.left = '0';
             document.getElementsByClassName('inner')[0].style.width = '100vw'; 
 
@@ -176,10 +176,10 @@
             document.documentElement.addEventListener('touchstart', onTouchStart, { passive: false })
             document.documentElement.addEventListener('touchmove', onTouchMove, { passive: false })
             */
-        }
+        //}
 
         
-        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview === 'undefined' && typeof window.TelegramWebviewProxyProto === 'undefined')) { 
+        if (parseInt(screenWidth) < '451') {  // && (typeof window.TelegramWebview === 'undefined' && typeof window.TelegramWebviewProxyProto === 'undefined')
             window.scrollTo(0, 50000);
             setInterval(() => {
                 window.scrollTo(0, 50000);
