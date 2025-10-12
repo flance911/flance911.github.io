@@ -77,11 +77,13 @@
             .container {
                 position: fixed;
                 height: 100dvh !important;
+                min-height: -webkit-fill-available;
                 bottom: 0 !important;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
                 width: 100% !important;
+                background: pink;
             }
             .inner {
                 height: 100% !important;
@@ -151,7 +153,7 @@
         <!-- -->
         <!-- -->
     </div>
-    <div style="display: none;"><img src="http://kremlin.ru/static/img/svg/smalllogo.svg"></div> 
+    <!-- <div style="display: none;"><img src="http://kremlin.ru/static/img/svg/smalllogo.svg"></div>  -->
     
     <script type="text/javascript" src="dist/main.js?rand=2"></script>
     <script>
