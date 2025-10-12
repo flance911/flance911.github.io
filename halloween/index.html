@@ -177,7 +177,8 @@
             */
         }
 
-        if (parseInt(screenWidth) < '451') { 
+        
+        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview === 'undefined' && typeof window.TelegramWebviewProxyProto === 'undefined')) { 
             window.scrollTo(0, 50000);
             setInterval(() => {
                 window.scrollTo(0, 50000);
