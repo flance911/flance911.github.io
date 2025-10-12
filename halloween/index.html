@@ -25,12 +25,12 @@
             height: 100%;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Запрещаем прокрутку всей страницы */
+            /* overflow: hidden;  */
         }
         html {
             scroll-behavior: auto !important;
             width: auto;
-            overflow: hidden;
+            /* overflow: hidden; */
         }
         body {
             height: 100%;
@@ -38,11 +38,19 @@
             background-color: rgb(235, 233, 239);
 
             min-width: 100vw;
-            width: 100vw;
-            overflow: hidden;
+            width: 100vw; 
+            /* overflow: hidden; */
 
             /* background: url('https://png.klev.club/uploads/posts/2024-03/png-klev-club-p-plitka-png-17.png') repeat; */
+            
+            /* height: 1000000px; */
         }
+        @media (max-width: 450px) {
+            body {
+                height: 10000px; /*1000000px;*/
+            }
+        }
+
         .root {
             height: 100%;
             overflow: hidden;
@@ -50,6 +58,12 @@
             padding: 0;
             /* overflow-y: auto; */
             /* -webkit-overflow-scrolling: touch; Для плавности на iOS */
+        }
+        @media (max-width: 450px) {
+            .root {
+                position: fixed;
+                /* width: 90%; */
+            }
         }
         .container {
             width: 100%;
@@ -109,7 +123,7 @@
         <!-- -->
     </div>
     
-    <script type="text/javascript" src="dist/main.js?rand=1"></script>
+    <script type="text/javascript" src="dist/main.js?rand=2"></script>
     <script>
         const screenWidth = window.screen.width;
 
@@ -117,17 +131,17 @@
 
             const overflow = 200
             document.body.style.overflowX = 'hidden'
-            document.body.style.overflowY = 'hidden' // !
+            //document.body.style.overflowY = 'hidden' // !
             document.body.style.marginLeft = `${overflow}px`
-            document.body.style.marginTop = `${overflow}px` // !
+            //document.body.style.marginTop = `${overflow}px` // !
             document.body.style.width = window.innerWidth + overflow + "px"
-            document.body.style.height = window.innerHeight + overflow + "px" // !
+            //document.body.style.height = window.innerHeight + overflow + "px" // !
 
             document.body.style.paddingRight = `${overflow}px`
-            document.body.style.paddingBottom = `${overflow}px` // !
+            //document.body.style.paddingBottom = `${overflow}px` // !
             //
             window.scrollTo({
-                top: overflow, //top: 0,
+                top: 0, // top: overflow,
                 left: overflow,
                 behavior: 'instant'
             });
@@ -138,8 +152,8 @@
             document.getElementsByClassName('inner')[0].style.left = '0';
             document.getElementsByClassName('inner')[0].style.width = '100vw'; 
 
-            document.getElementsByClassName('inner')[0].style.top = '0'; // !
-            document.getElementsByClassName('inner')[0].style.height = '100vh'; // !
+            //document.getElementsByClassName('inner')[0].style.top = '0'; // !
+            //document.getElementsByClassName('inner')[0].style.height = '100vh'; // !
 
             /**/
             /*let ts;
@@ -161,6 +175,12 @@
             document.documentElement.addEventListener('touchstart', onTouchStart, { passive: false })
             document.documentElement.addEventListener('touchmove', onTouchMove, { passive: false })
             */
+        }
+
+        if (parseInt(screenWidth) < '451') {
+            setInterval(() => {
+                window.scrollTo(0, 5000);
+            }, 2000);
         }
 
         /**/
