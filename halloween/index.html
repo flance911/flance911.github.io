@@ -45,16 +45,21 @@
             
             /* height: 1000000px; */
 
-            /* position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            overflow: scroll;
-            -webkit-overflow-scrolling: touch;
-            overflow-scrolling: touch; */
         }
         @media (max-width: 450px) {
+            body, html { 
+                overflow: hidden;
+            }
+            body {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                overflow: scroll;
+                -webkit-overflow-scrolling: touch;
+                overflow-scrolling: touch;
+            }
             .root {
                 height: 40000px !important;
             } 
@@ -73,10 +78,10 @@
                 position: fixed;
                 width: 100% !important;
             }
-            .inner, #c { 
+            /* .inner, #c { 
                 position: fixed;
                 bottom: 0;
-            }
+            } */
         }
         .container {
             width: 100%;
