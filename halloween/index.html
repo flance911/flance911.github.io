@@ -79,7 +79,8 @@
                 height: 100dvh !important;
                 bottom: 0 !important;
                 display: flex;
-                flex-direction: column-reverse;
+                flex-direction: column;
+                justify-content: flex-end;
                 width: 100% !important;
             }
             .inner {
@@ -138,6 +139,7 @@
 <body>
     <div class="root">
         <div class="container">
+            <!-- <div>!</div> -->
             <div class="inner">
                 <canvas data-width="" data-height="90%" id="c" width="375" height="667"></canvas>
                 <canvas data-width="" data-height="100%" id="cpk" width="1440" height="1024"></canvas>
