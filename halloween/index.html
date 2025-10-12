@@ -68,7 +68,6 @@
         .root {
             height: 100%;
             overflow: hidden;
-            overflow-y: auto;
             margin: 0;
             padding: 0;
             /* overflow-y: auto; */
@@ -224,6 +223,10 @@
             setInterval(() => {
                 window.scrollTo(0, 20000);
             }, 8000);
+
+            // document.body.addEventListener('touchmove', function(e) {
+            //     e.preventDefault();
+            // });
         }
 
         /**/
