@@ -45,14 +45,14 @@
             
             /* height: 1000000px; */
 
-            position: absolute;
+            /* position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
             overflow: scroll;
             -webkit-overflow-scrolling: touch;
-            overflow-scrolling: touch;
+            overflow-scrolling: touch; */
         }
         @media (max-width: 450px) {
             .root {
@@ -72,6 +72,10 @@
             .container {
                 position: fixed;
                 width: 100% !important;
+            }
+            .inner, #c { 
+                position: fixed;
+                bottom: 0;
             }
         }
         .container {
