@@ -87,8 +87,12 @@
             }
             .inner {
                 height: 100% !important;
-                /* position: fixed !important; */
-                /* bottom: 0 !important; */
+                min-height: -webkit-fill-available;
+                position: fixed !important;
+                bottom: 0 !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
             }
             /* .inner, #c { 
                 position: fixed;
