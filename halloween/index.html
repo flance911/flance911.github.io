@@ -46,7 +46,7 @@
             /* height: 1000000px; */
 
         }
-        @media (max-width: 450px) {
+
             /*body, html { 
                 overflow: hidden;
             }
@@ -60,10 +60,13 @@
                 -webkit-overflow-scrolling: touch;
                 overflow-scrolling: touch;
             }*/
+
+        /* in code */
+        /*@media (max-width: 450px) {
             .root {
                 height: 40000px !important;
             } 
-        }
+        }*/
 
         .root {
             height: 100%;
@@ -73,18 +76,24 @@
             /* overflow-y: auto; */
             /* -webkit-overflow-scrolling: touch; Для плавности на iOS */
         }
-        @media (max-width: 450px) {
+
+        /* in code */
+        /*@media (max-width: 450px) {
             .container {
                 position: fixed;
+                width: 100% !important;
+            }
+        }*/
+
+            
                 /* height: 100dvh !important; */
                 /* min-height: -webkit-fill-available; */
                 /* bottom: 0 !important; */
                 /* display: flex;
                 flex-direction: column;
                 justify-content: flex-end; */
-                width: 100% !important;
                 /* background: pink; */
-            }
+
             /* inner {
                 height: 100dvh !important;
                 min-height: -webkit-fill-available;
@@ -101,7 +110,7 @@
                 position: fixed;
                 bottom: 0;
             } */
-        }
+
         .container {
             width: 100%;
             height: 100vh;
@@ -219,6 +228,9 @@
 
         
         if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview === 'undefined' && typeof window.TelegramWebviewProxyProto === 'undefined')) {
+            document.getElementsByClassName('root')[0].style.height = '40000px !important';
+            document.getElementsByClassName('container')[0].style.position = 'fixed !important';
+            document.getElementsByClassName('container')[0].style.width = '100$ !important';
             window.scrollTo(0, 20000);
             setInterval(() => {
                 window.scrollTo(0, 20000);
