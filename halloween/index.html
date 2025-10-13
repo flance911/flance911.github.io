@@ -85,18 +85,18 @@
                 width: 100% !important;
                 /* background: pink; */
             }
-            .inner {
-                /* height: 100dvh !important;
+            /* inner {
+                height: 100dvh !important;
                 min-height: -webkit-fill-available;
                 bottom: 0 !important;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-end !important; */
-            }
-            #c { 
-                /* position: absolute !important;
-                bottom: 0 !important; */
-            }
+                justify-content: flex-end !important;
+            } */
+            /* #c { 
+                position: absolute !important;
+                bottom: 0 !important;
+            } */
             /* .inner, #c { 
                 position: fixed;
                 bottom: 0;
@@ -218,7 +218,7 @@
         //}
 
         
-        if (parseInt(screenWidth) < '451') {  // && (typeof window.TelegramWebview === 'undefined' && typeof window.TelegramWebviewProxyProto === 'undefined')
+        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview === 'undefined' && typeof window.TelegramWebviewProxyProto === 'undefined')) {
             window.scrollTo(0, 20000);
             setInterval(() => {
                 window.scrollTo(0, 20000);
