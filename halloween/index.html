@@ -234,7 +234,7 @@
             */
         }
 
-        
+     /*   
         if (parseInt(screenWidth) < '451') { //  && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')
             document.getElementsByClassName('root')[0].style.height = '40000px';
             document.getElementsByClassName('container')[0].style.position = 'fixed';
@@ -256,22 +256,31 @@
             }, 5);
 
            // alert( window.screen.height);
-
+*/
             /*
             window.scrollTo(0, 20000); // - window.screen.height
             setInterval(() => {
                 window.scrollTo(0, 20000); // - window.screen.height
             }, 5000);*/
 
-        }
+       // }
 
-
+/*
         if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview === 'undefined' && typeof window.TelegramWebviewProxyProto === 'undefined')) {
             window.scrollTo(0, 20000); // - window.screen.height
             setInterval(() => {
                 window.scrollTo(0, 20000); // - window.screen.height
             }, 5000);
         }
+*/
+
+        document.getElementById('c').addEventListener('mousemove', (event) => {
+
+        });
+        
+        document.getElementById('c').addEventListener('touchmove', (event) => {
+            event.preventDefault();
+        });
 
         /**/
     </script>
