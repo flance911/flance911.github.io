@@ -232,15 +232,16 @@
             document.getElementsByClassName('container')[0].style.position = 'fixed';
             document.getElementsByClassName('container')[0].style.width = '100%';
             document.getElementsByClassName('container')[0].style.height = '100dvh';
+            document.getElementsByClassName('container')[0].style.bottom = '0';
 
             document.getElementById('c').style.position = 'fixed';
             document.getElementById('c').style.bottom = '0';
 
            // alert( window.screen.height);
-            window.scrollTo(0, 40000 - window.screen.height);
+            window.scrollTo(0, 20000); // - window.screen.height
             // alert('telegram');
             setInterval(() => {
-                window.scrollTo(0, 40000 - window.screen.height);
+                window.scrollTo(0, 20000); // - window.screen.height
             }, 100);
             // document.body.addEventListener('touchmove', function(e) {
             //     e.preventDefault();
