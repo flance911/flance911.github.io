@@ -227,19 +227,19 @@
         //}
 
         
-        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')) {
-            document.getElementsByClassName('root')[0].style.height = '40000px';
+        if (parseInt(screenWidth) < '451') { //  && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')
+            document.getElementsByClassName('root')[0].style.height = '20000px';
             document.getElementsByClassName('container')[0].style.position = 'fixed';
             document.getElementsByClassName('container')[0].style.width = '100%';
             window.scrollTo(0, 20000);
             // alert('telegram');
             setInterval(() => {
                 window.scrollTo(0, 20000);
-            }, 8000);
-
+            }, 5);
             // document.body.addEventListener('touchmove', function(e) {
             //     e.preventDefault();
             // });
+
         }
 
         /**/
