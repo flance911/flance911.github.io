@@ -68,6 +68,14 @@
             } 
         }*/
 
+        /*@media (max-width: 450px) {
+            #c {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }*/
+
         .root {
             height: 100%;
             overflow: hidden;
@@ -175,7 +183,7 @@
     <script>
         const screenWidth = window.screen.width;
 
-        /*if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')) {
+        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')) {
 
             const overflow = 200
             document.body.style.overflowX = 'hidden'
@@ -189,7 +197,7 @@
             //document.body.style.paddingBottom = `${overflow}px` // !
             //
             window.scrollTo({
-                top: 50000, // 0, // top: overflow,
+                top: 20000, // 0, // top: overflow,
                 left: overflow,
                 behavior: 'instant'
             }); 
@@ -224,7 +232,7 @@
             document.documentElement.addEventListener('touchstart', onTouchStart, { passive: false })
             document.documentElement.addEventListener('touchmove', onTouchMove, { passive: false })
             */
-        //}
+        }
 
         
         if (parseInt(screenWidth) < '451') { //  && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')
@@ -236,17 +244,33 @@
 
             document.getElementById('c').style.position = 'fixed';
             document.getElementById('c').style.bottom = '0';
+            // document.getElementById('c').style.height = '300px';
+
+            document.getElementById('c').style.top = '50%';
+            // document.getElementById('c').style.left = '50%';
+            //console.log( '-'+(parseInt(document.getElementsByClassName('container')[0].style.height)/2)+'px');
+            setInterval(() => {
+                document.getElementById('c').style.marginTop = '-50dvh';
+                //document.getElementById('c').style.marginTop = '-'+(document.getElementById('c').style.height/2)+'px';
+                // document.getElementById('c').style.marginLeft = '-'+(window.screen.width/2)+'px';
+            }, 5);
 
            // alert( window.screen.height);
+
+            /*
             window.scrollTo(0, 20000); // - window.screen.height
-            // alert('telegram');
+            setInterval(() => {
+                window.scrollTo(0, 20000); // - window.screen.height
+            }, 5000);*/
+
+        }
+
+
+        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview === 'undefined' && typeof window.TelegramWebviewProxyProto === 'undefined')) {
+            window.scrollTo(0, 20000); // - window.screen.height
             setInterval(() => {
                 window.scrollTo(0, 20000); // - window.screen.height
             }, 5000);
-            // document.body.addEventListener('touchmove', function(e) {
-            //     e.preventDefault();
-            // });
-
         }
 
         /**/
