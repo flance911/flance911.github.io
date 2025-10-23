@@ -7,6 +7,22 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     
 
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=104662559', 'ym');
+
+    ym(104662559, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/104662559" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
     <title>Halloween</title>
     <style type="text/css">
         /* @font-face {
@@ -161,6 +177,20 @@
         #emailinput.error::placeholder {
             color: rgba(246, 54, 60, 1);
         } */
+
+        #emailinput {
+            color: white; /*rgba(72, 73, 90, 1);*/
+            font-weight: bold;
+        }
+        #emailinput.error {
+            color: rgba(246, 54, 60, 1);
+        }
+        #emailinput::placeholder {
+            color: rgba(182, 185, 196, 1);
+        }
+        #emailinput.error::placeholder {
+            color: rgba(246, 54, 60, 1);
+        }
     </style>
 </head>
 <body>
@@ -174,6 +204,30 @@
         </div>
         <!---->
     </div>
+    <!-- <style>
+        .toppage {
+            position: fixed;
+            width: 100vw;
+            height: 100%;    
+            background: #a037377a;
+            top: 0;
+            overflow-y: scroll;
+        }
+        .toppage_pic {
+            /* height: 100%; */
+            /* width: 100%; */
+
+        }
+    </style>
+    <div class="toppage">
+        <img class="toppage_pic" src="img/common/onboard/prizes_msg.png">
+    </div>
+    <script>
+        setInterval(() => {
+            document.getElementsByClassName('toppage_pic')[0].width = document.getElementById('cpk').width;
+
+        }, 2000);
+    </script> -->
     <div id="resources" style="display: none;">
         <!-- -->
         <!-- -->
