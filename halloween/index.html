@@ -55,11 +55,7 @@
 
             min-width: 100vw;
             width: 100vw; 
-            /* overflow: hidden; */
-
-            /* background: url('https://png.klev.club/uploads/posts/2024-03/png-klev-club-p-plitka-png-17.png') repeat; */
             
-            /* height: 1000000px; */
             background: url('img/background.png') no-repeat;
             background-size: cover;
         }
@@ -102,39 +98,7 @@
             /* -webkit-overflow-scrolling: touch; Для плавности на iOS */
         }
 
-        /* in code */
-        /*@media (max-width: 450px) {
-            .container {
-                position: fixed;
-                width: 100% !important;
-            }
-        }*/
-
-            
-                /* height: 100dvh !important; */
-                /* min-height: -webkit-fill-available; */
-                /* bottom: 0 !important; */
-                /* display: flex;
-                flex-direction: column;
-                justify-content: flex-end; */
-                /* background: pink; */
-
-            /* inner {
-                height: 100dvh !important;
-                min-height: -webkit-fill-available;
-                bottom: 0 !important;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end !important;
-            } */
-            /* #c { 
-                position: absolute !important;
-                bottom: 0 !important;
-            } */
-            /* .inner, #c { 
-                position: fixed;
-                bottom: 0;
-            } */
+        
 
         .container {
             width: 100%;
@@ -164,19 +128,7 @@
             border: none;
         }
         /**/
-        /* #emailinput {
-            color: rgba(72, 73, 90, 1);
-            font-weight: bold;
-        }
-        #emailinput.error {
-            color: rgba(246, 54, 60, 1);
-        }
-        #emailinput::placeholder {
-            color: rgba(182, 185, 196, 1);
-        }
-        #emailinput.error::placeholder {
-            color: rgba(246, 54, 60, 1);
-        } */
+        
 
         #emailinput {
             color: white; /*rgba(72, 73, 90, 1);*/
@@ -204,35 +156,11 @@
         </div>
         <!---->
     </div>
-    <!-- <style>
-        .toppage {
-            position: fixed;
-            width: 100vw;
-            height: 100%;    
-            background: #a037377a;
-            top: 0;
-            overflow-y: scroll;
-        }
-        .toppage_pic {
-            /* height: 100%; */
-            /* width: 100%; */
-
-        }
-    </style>
-    <div class="toppage">
-        <img class="toppage_pic" src="img/common/onboard/prizes_msg.png">
-    </div>
-    <script>
-        setInterval(() => {
-            document.getElementsByClassName('toppage_pic')[0].width = document.getElementById('cpk').width;
-
-        }, 2000);
-    </script> -->
+    <!--  -->
     <div id="resources" style="display: none;">
         <!-- -->
         <!-- -->
     </div>
-    <!-- <div style="display: none;"><img src="http://kremlin.ru/static/img/svg/smalllogo.svg"></div>  -->
     
     <script type="text/javascript" src="dist/main.js?rand=2"></script>
     <script>
@@ -268,65 +196,19 @@
             //document.getElementsByClassName('inner')[0].style.height = '100vh'; // !
 
             /**/
-            /*let ts;
-            const onTouchStart = (e) => {
-                ts = e.touches[0].clientY
-            }
-            const onTouchMove = (e) => {
-                let scrollableEl = document.getElementById('c');
-                if (scrollableEl) {
-                    const scroll = scrollableEl.scrollTop
-                    const te = e.changedTouches[0].clientY
-                    if (scroll <= 0 && ts && ts < te) {
-                    e.preventDefault()
-                    }
-                } else {
-                    e.preventDefault()
-                }
-            }
-            document.documentElement.addEventListener('touchstart', onTouchStart, { passive: false })
-            document.documentElement.addEventListener('touchmove', onTouchMove, { passive: false })
-            */
+            /**/
         }
 
      /*   
-        if (parseInt(screenWidth) < '451') { //  && (typeof window.TelegramWebview !== 'undefined' || typeof window.TelegramWebviewProxyProto !== 'undefined')
-            document.getElementsByClassName('root')[0].style.height = '40000px';
-            document.getElementsByClassName('container')[0].style.position = 'fixed';
-            document.getElementsByClassName('container')[0].style.width = '100%';
-            document.getElementsByClassName('container')[0].style.height = '100dvh';
-            document.getElementsByClassName('container')[0].style.bottom = '0';
-
-            document.getElementById('c').style.position = 'fixed';
-            document.getElementById('c').style.bottom = '0';
-            // document.getElementById('c').style.height = '300px';
-
-            document.getElementById('c').style.top = '50%';
-            // document.getElementById('c').style.left = '50%';
-            //console.log( '-'+(parseInt(document.getElementsByClassName('container')[0].style.height)/2)+'px');
-            setInterval(() => {
-                document.getElementById('c').style.marginTop = '-50dvh';
-                //document.getElementById('c').style.marginTop = '-'+(document.getElementById('c').style.height/2)+'px';
-                // document.getElementById('c').style.marginLeft = '-'+(window.screen.width/2)+'px';
-            }, 5);
-
-           // alert( window.screen.height);
+        
 */
             /*
-            window.scrollTo(0, 20000); // - window.screen.height
-            setInterval(() => {
-                window.scrollTo(0, 20000); // - window.screen.height
-            }, 5000);*/
+            */
 
        // }
 
 /*
-        if (parseInt(screenWidth) < '451' && (typeof window.TelegramWebview === 'undefined' && typeof window.TelegramWebviewProxyProto === 'undefined')) {
-            window.scrollTo(0, 20000); // - window.screen.height
-            setInterval(() => {
-                window.scrollTo(0, 20000); // - window.screen.height
-            }, 5000);
-        }
+        
 */
 
         document.getElementById('c').addEventListener('mousemove', (event) => {
